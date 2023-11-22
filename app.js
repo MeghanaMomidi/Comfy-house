@@ -1,9 +1,3 @@
-const client = contentful.createClient({
-    // This is the space ID. A space is like a project folder in Contentful terms
-    space: "vusmul1flquc",
-    // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
-    accessToken: "6S0DX9HZaM5F5R8NuLE6161q0aCagt96Mcxf3TQsHv8"
-  });
 //variables
 
 const cartBtn=document.querySelector('.cart-btn');
@@ -25,16 +19,12 @@ let buttonsDOM=[];
 class Products{
 async getProducts(){
     try {
-        //to get data from contentful
-        let contentful=await client.getEntries({
-            content_type:"comfyHouseProductExample"
-        })
-        let products = contentful.items;
+        
         //to get data from json
-        // let result = await fetch("products1.json");
-        // let data = await result.json();
-        // let products = data.items;
-        // console.log(products);
+        let result = await fetch("products1.json");
+        let data = await result.json();
+        let products = data.items;
+        console.log(products);
         products=products.map(item =>{
             const {title,price}=item.fields;
             const {id}=item.sys;
@@ -253,7 +243,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     // get all products
 products.getProducts().then(products => {
     ui.displayProducts(products);
-    Storage.saveProducts(products);//static methods can be used just by using the class name and without a need to create an instance/object
+    Storage.saveProducts(products);//static methods can be called just by using the class name and without a need to create an instance/object
 }).then(()=>{
     ui.getBagButtons();
     ui.cartLogic();
