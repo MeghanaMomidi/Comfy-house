@@ -1,60 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- website icon --> 
-    <link rel="shortcut icon" href="./setup-files-js-comfy-house-master/images/website icon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- website icon -->
+    <link rel="shortcut icon" href="./images/website icon.png" />
     <title>Comfy House</title>
     <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/ddb1aa9586.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/ddb1aa9586.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- custom css -->
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-<!-- navbar -->
-<nav class="navbar">
-    <div class="navbar-center">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar-center">
         <span class="nav-icon">
-            <i class="fas fa-bars"></i>
+          <i class="fas fa-bars"></i>
         </span>
-        <img src="./images/logo.svg" alt="store logo">
+        <img src="./images/logo.svg" alt="store logo" />
         <div class="cart-btn">
-            <span class="nav-icon">
-                <i class="fas fa-cart-plus"></i>
-            </span>
-            <div class="cart-items">0</div>
+          <span class="nav-icon">
+            <i class="fas fa-cart-plus"></i>
+          </span>
+          <div class="cart-items">0</div>
         </div>
-    </div> 
-</nav>
-<!--end of  navbar -->
-<!-- hero  -->
-<header class="hero">
-    <div class="banner">
+      </div>
+    </nav>
+    <!--end of  navbar -->
+    <!-- hero  -->
+    <header class="hero">
+      <div class="banner">
         <h1 class="banner-title">furniture collection</h1>
         <!-- <button class="banner-btn">shop now</button> -->
         <a class="banner-btn" href="#products">shop now</a>
+      </div>
+    </header>
+    <!-- end of hero  -->
+
+    <!-- About Page -->
+    <section class="about" id="about">
+      <div class="section-title">
+        <h2>About us</h2>
+        <div class="section-title-underline"></div>
+      </div>
+      <div class="about-content">
+        <p>
+          We specialize in bespoke kitchens, bedrooms and living room furniture.
+          All designed and created to give you the perfect solution to
+          compliment your home regardless of space or budget. Our designs range
+          from a vast traditional to contemporary range of furnitures, we can
+          offer any solution to fit any space in your homes.
+        </p>
+      </div>
+      <article class="about-backdrop">
+        <div class="about-grid">
+            <div class="grid-item">
+                <h1>85%</h1>
+                <h3>MINIMALISM</h2>
+                <div class="about-underline"></div>
+                <p>Our design elements convey the message of simplicity</p>
+            </div>
+            <div class="grid-item">
+                <h1>89%</h1>
+                <h3>DESIGN</h2>
+                <div class="about-underline"></div>
+                <p>Our excellence in design fused with innovation</p></div>
+            <div class="grid-item">
+                <h1>96%</h1>
+                <h3>PERFECTION</h2>
+                <div class="about-underline"></div>
+                <p>We are on a mission to deliver perfection in all our product lines</p></div>
+        </div>
+    </article>
+        <div class="underline-container">
+        <span class="underline"></span>
+        <span class="icon">&#x1F451</span>
+        <span class="underline"></span>
+        </div>
+      
+    <div class="about-grid-2">
+        
+       <div class="grid-item">
+        <h3>OUR MISSION</h3>
+        <p>Our Mission is to create value for our customers through Reliability, Flexibility, Integrity and Speed.<br>
+        We want every Furniture House customer to be warm, worry free and comfortable through Respect and Trust.</p>
+       </div>
+       <div class="grid-item">
+        <h3>OUR VISION</h3>
+        <p>Our Vision is to be a leading international furniture manufacturer offering innovative and superior quality products. This statement reflects our purpose and anticipation for the future, driving us to providing the best “value for money” products accompanied by the best service in the industry, right from design to delivery.
+        </p>
+       </div>
     </div>
-</header>
-<!-- end of hero  -->
+    </section>
+    
+    
 
-<!-- About Page -->
-<section class="about" id="about">
+    <!-- End of about page -->
 
-</section>
-
-
-<!-- End of about page -->
-
-<!-- products  -->
-<section class="products" id="products">
-    <div class="section-title">
+    <!-- products  -->
+    <section class="products" id="products">
+      <div class="section-title">
         <h2>our products</h2>
         <div class="section-title-underline"></div>
-    </div>
-    <div class="products-center">
+      </div>
+      <div class="products-center">
         <!-- single item -->
         <!-- <article class="product">
             <div class="img-container">
@@ -68,21 +123,21 @@
             <h4>$23</h4>
         </article> -->
         <!-- end of single item -->
-    </div>
-</section>
-<!-- end of products  -->
-<!-- cart -->
-<div class="cart-overlay">
-    <div class="cart">
+      </div>
+    </section>
+    <!-- end of products  -->
+    <!-- cart -->
+    <div class="cart-overlay">
+      <div class="cart">
         <span class="close-cart">
-            <i class="fas fa-window-close"></i>
+          <i class="fas fa-window-close"></i>
         </span>
         <h2>your cart</h2>
         <div class="cart-title-underline"></div>
         <div class="cart-content">
-            <!-- cart item -->
-            <!-- we will add the cart items dynamically in javascript -->
-            <!-- <div class="cart-item">
+          <!-- cart item -->
+          <!-- we will add the cart items dynamically in javascript -->
+          <!-- <div class="cart-item">
                 <img src="./setup-files-js-comfy-house-master/images/product-2.jpeg" alt="">
                 <div>
                     <h4>queen bed</h4>
@@ -95,16 +150,16 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div> -->
-            <!-- end of cart-item -->
+          <!-- end of cart-item -->
         </div>
         <div class="cart-footer">
-            <h3>your cart : $ <span class="cart-total">0</span></h3>
-            <button class="clear-cart banner-btn">clear cart</button>
+          <h3>your cart : $ <span class="cart-total">0</span></h3>
+          <button class="clear-cart banner-btn">clear cart</button>
         </div>
+      </div>
     </div>
-</div>
-<!-- end of cart -->
-<!-- app js -->
+    <!-- end of cart -->
+    <!-- app js -->
     <script src="./app.js"></script>
-</body>
+  </body>
 </html>
