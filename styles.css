@@ -65,6 +65,7 @@ body {
 .hero{
     min-height:calc(100vh - 60px);
     background:url('./images/hero-bcg.jpeg') center/cover no-repeat;
+    background-attachment: fixed;
     display:flex;
     align-items:center;
     justify-content:center;
