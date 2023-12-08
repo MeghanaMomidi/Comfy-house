@@ -64,7 +64,6 @@ productsDOM.innerHTML=result;
 getBagButtons(){
     const buttons=[...document.querySelectorAll('.bag-btn')];
     console.log(buttons);
-    //using spread operator sets all the buttons in an array and we can use 'find' to find a particular button or else all the buttons will be stored as nodeList
     buttonsDOM = buttons;
     buttons.forEach(button=>{
         let id = button.dataset.id;
@@ -81,7 +80,7 @@ getBagButtons(){
                 // console.log(id);
                 //get product from products
                 let cartItem={...Storage.getProduct(id),
-                amount:1};//spread operator is used here to include all the properties of storage and also add another property(amount) to object(cartItem)
+                amount:1};
                 // console.log(cartItem);
                 
                 //add product to the cart
@@ -142,19 +141,18 @@ setupAPP(){
 cart=Storage.getCart();
 this.setCartValues(cart);
 this.populateCart(cart);
-cartBtn.addEventListener('click',this.showCart);//this kind of setup will refernce to the button but not the class.we use this if we dont need to access the methods within the class but only the DOM elements
+cartBtn.addEventListener('click',this.showCart);
 closeCartBtn.addEventListener('click',this.hideCart);
 }
 populateCart(cart){
     cart.forEach(item=>this.addCartItem(item));
 }
 cartLogic(){
-    // clearCartBtn.addEventListener('click',this.clearCart);//this kind of setup will reference the button but not the class
+    
     //clear cart button
     clearCartBtn.addEventListener('click',()=>{
        this.clearCart();
-    });//this kind of setup will point the class.we use this if we want access the methods within the class
-
+    });
     //cart functionality
     cartContent.addEventListener('click',event=>{
         if(event.target.classList.contains('remove-item')){
@@ -231,8 +229,7 @@ static saveCart(cart){
 }
 static getCart(){
     return localStorage.getItem('cart')?JSON.parse(localStorage.getItem('cart')):[];
-    //?-if true
-    //:-if false
+    
 }
 }
 document.addEventListener('DOMContentLoaded',()=>{
@@ -243,7 +240,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     // get all products
 products.getProducts().then(products => {
     ui.displayProducts(products);
-    Storage.saveProducts(products);//static methods can be called just by using the class name and without a need to create an instance/object
+    Storage.saveProducts(products);
 }).then(()=>{
     ui.getBagButtons();
     ui.cartLogic();
