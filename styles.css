@@ -64,7 +64,7 @@ body {
 
 .hero{
     min-height:calc(100vh - 60px);
-    background:url('./setup-files-js-comfy-house-master/images/hero-bcg.jpeg') center/cover no-repeat;
+    background:url('./images/hero-bcg.jpeg') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
