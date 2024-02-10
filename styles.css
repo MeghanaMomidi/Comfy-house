@@ -21,6 +21,21 @@ body {
   background:linear-gradient(rgba(255,255,255,0.65),rgba(255,255,255,0.65)),url("../images/bodybcg.jpg");
 }
 
+.section-title h2{
+  text-align:center;
+  text-transform: capitalize;
+  font-size:2.5rem;
+  margin-bottom:1rem;
+  letter-spacing: var(--mainSpacing);
+}
+.section-title-underline{
+  background:#f09d51;
+  width:11rem;
+  height:0.25rem;
+  margin:0 auto;/* margin: top right bottom left */
+  margin-bottom:2rem;
+}
+
 /* --------------- Navbar ---------------- */
 .navbar{
     position:sticky;
@@ -65,8 +80,8 @@ body {
 
 .hero{
     min-height:calc(100vh - 60px);
-    background:url('./images/hero-bcg.jpeg') center/cover no-repeat;
-    background-attachment: fixed;
+    background:url('./images/hero-bcg.jpeg') center/cover fixed no-repeat;
+    /* background-attachment: fixed; */
     display:flex;
     align-items:center;
     justify-content:center;
@@ -218,20 +233,7 @@ margin-top: 1rem;
 .products{
 padding:4rem 0;
 }
-.section-title h2{
-    text-align:center;
-    text-transform: capitalize;
-    font-size:2.5rem;
-    margin-bottom:1rem;
-    letter-spacing: var(--mainSpacing);
-}
-.section-title-underline{
-    background:#f09d51;
-    width:11rem;
-    height:0.25rem;
-    margin:0 auto;/* margin: top right bottom left */
-    margin-bottom:2rem;
-}
+
 .products-center{
     width:90vw;
     margin:0 auto;
